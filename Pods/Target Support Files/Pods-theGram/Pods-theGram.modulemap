@@ -1,0 +1,6 @@
+framework module Pods_theGram {
+  umbrella header "Pods-theGram-umbrella.h"
+
+  export *
+  module * { export * }
+}
