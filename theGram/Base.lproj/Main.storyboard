@@ -12,7 +12,7 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Logged In View Controller-->
         <scene sceneID="azx-RP-yI7">
             <objects>
-                <viewController id="3Wm-fx-9hl" customClass="LoggedInViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loggedInViewController" id="3Wm-fx-9hl" customClass="LoggedInViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="18r-Ln-hge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="onLogOut:" destination="3Wm-fx-9hl" eventType="touchUpInside" id="9Ls-pk-6z3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
