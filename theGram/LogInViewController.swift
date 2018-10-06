@@ -39,6 +39,7 @@ class LogInViewController: UIViewController {
         
         newUser.username = usernameTextField.text
         newUser.password = passwordTextField.text
+        
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print("Yay, created a user!")
@@ -57,9 +58,6 @@ class LogInViewController: UIViewController {
     }
     
     
-    @IBAction func onLogOut(_ sender: Any) {
-        
-    }
     
     /*
     // MARK: - Navigation

@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5008FD2164844600EF2CD0 /* AppDelegate.swift */; };
-		5D5009002164844600EF2CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5008FF2164844600EF2CD0 /* ViewController.swift */; };
 		5D5009032164844600EF2CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5009012164844600EF2CD0 /* Main.storyboard */; };
 		5D5009052164844800EF2CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5009042164844800EF2CD0 /* Assets.xcassets */; };
 		5D5009082164844800EF2CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5009062164844800EF2CD0 /* LaunchScreen.storyboard */; };
 		5D5009132164844800EF2CD0 /* theGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5009122164844800EF2CD0 /* theGramTests.swift */; };
 		5D50091E2164844800EF2CD0 /* theGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50091D2164844800EF2CD0 /* theGramUITests.swift */; };
 		5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50092B21648BA600EF2CD0 /* LogInViewController.swift */; };
+		5D7C7B27216969B40046C1CB /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */; };
 		8CF1033E973185E641452426 /* Pods_theGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930CE4E880BE511D29D33CE /* Pods_theGramUITests.framework */; };
 		B7A8849A6B73748AAB1D3CF1 /* Pods_theGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */; };
 		DF1CE3F7D626D742233D047B /* Pods_theGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1070959CF7E72743780325 /* Pods_theGram.framework */; };
@@ -44,7 +44,6 @@
 		54953CB195165B59919B752B /* Pods-theGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGram/Pods-theGram.debug.xcconfig"; sourceTree = "<group>"; };
 		5D5008FA2164844600EF2CD0 /* theGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5008FD2164844600EF2CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D5008FF2164844600EF2CD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D5009022164844600EF2CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D5009042164844800EF2CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D5009072164844800EF2CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		5D50091D2164844800EF2CD0 /* theGramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theGramUITests.swift; sourceTree = "<group>"; };
 		5D50091F2164844800EF2CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D50092B21648BA600EF2CD0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theGramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F259E037374B985891B076 /* Pods-theGramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGramUITests/Pods-theGramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD7320AC0AA426BFB1C3F736 /* Pods-theGramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-theGramUITests/Pods-theGramUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5D50092B21648BA600EF2CD0 /* LogInViewController.swift */,
-				5D5008FF2164844600EF2CD0 /* ViewController.swift */,
+				5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */,
 				5D5009012164844600EF2CD0 /* Main.storyboard */,
 				5D5008FD2164844600EF2CD0 /* AppDelegate.swift */,
 				5D5009042164844800EF2CD0 /* Assets.xcassets */,
@@ -380,7 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D5009002164844600EF2CD0 /* ViewController.swift in Sources */,
+				5D7C7B27216969B40046C1CB /* LoggedInViewController.swift in Sources */,
 				5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */,
 				5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */,
 			);
