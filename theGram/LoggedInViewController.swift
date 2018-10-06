@@ -24,10 +24,9 @@ class LoggedInViewController: UIViewController {
             } else {
                 print("Successful loggout")
                 // Load and show the login view controller
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController")
-                //why wont this work
-                //self.window?.rootViewController = loginViewController
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
+                self.present(loginViewController, animated: true, completion: nil)
             }
         })
         
