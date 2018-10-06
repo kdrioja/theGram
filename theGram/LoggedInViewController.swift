@@ -26,7 +26,8 @@ class LoggedInViewController: UIViewController {
                 // Load and show the login view controller
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController")
-                self.window?.rootViewController = loginViewController
+                //why wont this work
+                //self.window?.rootViewController = loginViewController
             }
         })
         
