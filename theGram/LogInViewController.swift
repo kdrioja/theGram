@@ -56,6 +56,11 @@ class LogInViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func onLogOut(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
