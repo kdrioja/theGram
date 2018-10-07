@@ -37,14 +37,14 @@ class Post: PFObject, PFSubclassing {
         let post = Post()
         
         // Add relevant fields to the object
-        post.media = getPFFileFromImage(image) // PFFile column type
-        post.author = PFUser.current() // Pointer column type that points to PFUser
-        post.caption = caption
+        post.media = getPFFileFromImage(image: image)! // PFFile column type
+        post.author = PFUser.current()! // Pointer column type that points to PFUser
+        post.caption = caption!
         post.likesCount = 0
         post.commentsCount = 0
         
         // Save object (following function will save the object in Parse asynchronously)
-        post.saveInBackgroundWithBlock(completion)
+        post.saveInBackground(block: completion)
     }
     
     /**
@@ -58,7 +58,7 @@ class Post: PFObject, PFSubclassing {
         // check if image is not nil
         if let image = image {
             // get image data and check if that is not nil
-            if let imageData = UIImagePNGRepresentation(image) {
+            if let imageData = image.pngData() {
                 return PFFile(name: "image.png", data: imageData)
             }
         }
