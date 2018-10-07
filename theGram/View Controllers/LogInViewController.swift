@@ -44,7 +44,7 @@ class LogInViewController: UIViewController {
             if success {
                 print("Yay, created a user!")
                 print("You're logged in!")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 
             } else {
                 print(error?.localizedDescription)
