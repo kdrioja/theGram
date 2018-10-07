@@ -25,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        if PFUser.current() != nil {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "loggedInViewController")
+        }
+        
         return true
     }
 
