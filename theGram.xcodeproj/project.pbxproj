@@ -16,6 +16,7 @@
 		5D50091E2164844800EF2CD0 /* theGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50091D2164844800EF2CD0 /* theGramUITests.swift */; };
 		5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50092B21648BA600EF2CD0 /* LogInViewController.swift */; };
 		5D7C7B27216969B40046C1CB /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */; };
+		5DAA8F6D216A827D0027B8F7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA8F6C216A827D0027B8F7 /* Post.swift */; };
 		8CF1033E973185E641452426 /* Pods_theGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930CE4E880BE511D29D33CE /* Pods_theGramUITests.framework */; };
 		B7A8849A6B73748AAB1D3CF1 /* Pods_theGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */; };
 		DF1CE3F7D626D742233D047B /* Pods_theGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1070959CF7E72743780325 /* Pods_theGram.framework */; };
@@ -58,6 +59,7 @@
 		5D50091F2164844800EF2CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D50092B21648BA600EF2CD0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		5DAA8F6C216A827D0027B8F7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theGramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F259E037374B985891B076 /* Pods-theGramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGramUITests/Pods-theGramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD7320AC0AA426BFB1C3F736 /* Pods-theGramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-theGramUITests/Pods-theGramUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,13 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D04FEB521699133001E631B /* Views */ = {
+		5D04FEB521699133001E631B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				5D7C7B26216969B40046C1CB /* LoggedInViewController.swift */,
 				5D50092B21648BA600EF2CD0 /* LogInViewController.swift */,
+				5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */,
 			);
-			path = Views;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		5D5008F12164844600EF2CD0 = {
@@ -127,10 +130,10 @@
 		5D5008FC2164844600EF2CD0 /* theGram */ = {
 			isa = PBXGroup;
 			children = (
-				5D04FEB521699133001E631B /* Views */,
-				5D5009012164844600EF2CD0 /* Main.storyboard */,
-				5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */,
+				5DAA8F6E216A82840027B8F7 /* Models */,
+				5D04FEB521699133001E631B /* View Controllers */,
 				5D5008FD2164844600EF2CD0 /* AppDelegate.swift */,
+				5D5009012164844600EF2CD0 /* Main.storyboard */,
 				5D5009062164844800EF2CD0 /* LaunchScreen.storyboard */,
 				5D5009042164844800EF2CD0 /* Assets.xcassets */,
 				5D5009092164844800EF2CD0 /* Info.plist */,
@@ -154,6 +157,14 @@
 				5D50091F2164844800EF2CD0 /* Info.plist */,
 			);
 			path = theGramUITests;
+			sourceTree = "<group>";
+		};
+		5DAA8F6E216A82840027B8F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DAA8F6C216A827D0027B8F7 /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B73D4DA324FD97DEFEF43B9F /* Frameworks */ = {
@@ -395,6 +406,7 @@
 				5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */,
 				5D2E6D7E216987720060F114 /* PhotoMapViewController.swift in Sources */,
 				5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */,
+				5DAA8F6D216A827D0027B8F7 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
