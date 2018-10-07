@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2E6D7E216987720060F114 /* PhotoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */; };
 		5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5008FD2164844600EF2CD0 /* AppDelegate.swift */; };
 		5D5009032164844600EF2CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5009012164844600EF2CD0 /* Main.storyboard */; };
 		5D5009052164844800EF2CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5009042164844800EF2CD0 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		1BAAB8F66283A1B318128855 /* Pods-theGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGram.release.xcconfig"; path = "Pods/Target Support Files/Pods-theGram/Pods-theGram.release.xcconfig"; sourceTree = "<group>"; };
 		1F1070959CF7E72743780325 /* Pods_theGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54953CB195165B59919B752B /* Pods-theGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGram/Pods-theGram.debug.xcconfig"; sourceTree = "<group>"; };
+		5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapViewController.swift; sourceTree = "<group>"; };
 		5D5008FA2164844600EF2CD0 /* theGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5008FD2164844600EF2CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5009022164844600EF2CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				5D5009042164844800EF2CD0 /* Assets.xcassets */,
 				5D5009062164844800EF2CD0 /* LaunchScreen.storyboard */,
 				5D5009092164844800EF2CD0 /* Info.plist */,
+				5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */,
 			);
 			path = theGram;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				5D7C7B27216969B40046C1CB /* LoggedInViewController.swift in Sources */,
 				5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */,
+				5D2E6D7E216987720060F114 /* PhotoMapViewController.swift in Sources */,
 				5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
