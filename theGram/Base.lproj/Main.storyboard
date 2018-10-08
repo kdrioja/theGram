@@ -56,8 +56,8 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDY-JX-h9o"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-Kj-XjE">
-                                <rect key="frame" x="166" y="293" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid username/password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-Kj-XjE">
+                                <rect key="frame" x="83" y="288" width="208" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,15 +69,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xZ1-8s-qeO"/>
                     <connections>
+                        <outlet property="errorLabel" destination="q92-Kj-XjE" id="6yk-JI-v23"/>
                         <outlet property="passwordTextField" destination="4a2-4Z-efK" id="4pj-61-ZGa"/>
-                        <outlet property="usernameTakenLabel" destination="q92-Kj-XjE" id="NBH-2Y-rUx"/>
                         <outlet property="usernameTextField" destination="N2h-LT-OjZ" id="hyw-n1-Y8A"/>
-                        <segue destination="Fkf-Nf-EXN" kind="presentation" id="b8m-UN-PvX"/>
+                        <segue destination="Fkf-Nf-EXN" kind="presentation" identifier="loginSegue" id="b8m-UN-PvX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1231" y="-663"/>
+            <point key="canvasLocation" x="-1231.2" y="-663.41829085457277"/>
         </scene>
         <!--Profile-->
         <scene sceneID="k1Q-dG-gqX">

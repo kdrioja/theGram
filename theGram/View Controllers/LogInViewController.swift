@@ -15,11 +15,13 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var usernameTakenLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.errorLabel.text = "   "
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,7 +32,9 @@ class LogInViewController: UIViewController {
                 print("You're logged in!")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
-                
+                if error?._code == 101 {
+                    self.errorLabel.text = "Invalid username/password"
+                }
             }
         }
     }
@@ -53,7 +57,9 @@ class LogInViewController: UIViewController {
                 
                 if error?._code == 202 {
                     print("Username is already taken.")
-                    self.usernameTakenLabel.text = "Username is already taken."
+                    self.errorLabel.text = "Username already taken"
+                    
+                    
                     
                     
                 }
