@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class HomeInViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +28,7 @@ class HomeInViewController: UIViewController {
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
                 self.present(loginViewController, animated: true, completion: nil)
             }
-        })
-        
-        
-        
-        
-        
-        
-        
-        }
+        })    }
     
     /*
     // MARK: - Navigation

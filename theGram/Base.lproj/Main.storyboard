@@ -56,6 +56,13 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDY-JX-h9o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-Kj-XjE">
+                                <rect key="frame" x="166" y="293" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +70,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="xZ1-8s-qeO"/>
                     <connections>
                         <outlet property="passwordTextField" destination="4a2-4Z-efK" id="4pj-61-ZGa"/>
+                        <outlet property="usernameTakenLabel" destination="q92-Kj-XjE" id="NBH-2Y-rUx"/>
                         <outlet property="usernameTextField" destination="N2h-LT-OjZ" id="hyw-n1-Y8A"/>
                         <segue destination="Fkf-Nf-EXN" kind="presentation" id="b8m-UN-PvX"/>
                     </connections>
@@ -90,7 +98,7 @@
         <!--Home Feed-->
         <scene sceneID="59P-ya-MPK">
             <objects>
-                <viewController id="dgx-HT-A1D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="dgx-HT-A1D" customClass="HomeViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jXM-gL-Y8N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +136,11 @@
                         <viewLayoutGuide key="safeArea" id="LBf-9e-vtf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home Feed" id="7Bg-8r-MrW">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="QQ9-jl-x4e"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="QQ9-jl-x4e">
+                            <connections>
+                                <action selector="onLogOut:" destination="dgx-HT-A1D" id="F4u-ds-mSJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="cMh-PC-bvt"/>
                     </navigationItem>
                 </viewController>

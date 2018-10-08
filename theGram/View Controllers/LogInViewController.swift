@@ -15,6 +15,8 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var usernameTakenLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +53,9 @@ class LogInViewController: UIViewController {
                 
                 if error?._code == 202 {
                     print("Username is already taken.")
+                    self.usernameTakenLabel.text = "Username is already taken."
+                    
+                    
                 }
                 
             }
