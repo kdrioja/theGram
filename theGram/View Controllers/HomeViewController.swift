@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoggedInViewController: UIViewController {
+class HomeInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
