@@ -17,6 +17,17 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func onCreatePost(_ sender: Any) {
+        
+        //edit this code below to transition to CreatePostViewController
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
+        self.present(loginViewController, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func onLogOut(_ sender: Any) {
         PFUser.logOutInBackground(block: { (error) in
             if let error = error {
@@ -28,16 +39,6 @@ class HomeViewController: UIViewController {
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
                 self.present(loginViewController, animated: true, completion: nil)
             }
-        })    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        })
     }
-    */
-
 }

@@ -81,7 +81,7 @@
         <!--Profile-->
         <scene sceneID="k1Q-dG-gqX">
             <objects>
-                <viewController id="I2x-U7-y2j" sceneMemberID="viewController">
+                <viewController id="I2x-U7-y2j" customClass="ProfileViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xvw-qI-7Qg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,19 +107,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="359" id="oyW-c4-SeB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="359"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="444" id="oyW-c4-SeB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="444"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyW-c4-SeB" id="h5a-zJ-kKG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="358.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="443.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-R2-fR6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hanging out with my boo in laguna beach #blessed #californialiving" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-HW-X09">
-                                                    <rect key="frame" x="0.0" y="308" width="375" height="51"/>
+                                                    <rect key="frame" x="15" y="383" width="345" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -142,6 +142,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="cMh-PC-bvt">
                             <connections>
+                                <action selector="onCreatePost:" destination="dgx-HT-A1D" id="C4s-z4-TPp"/>
                                 <segue destination="IJQ-9j-Rt2" kind="presentation" id="yvX-Ak-YhF"/>
                             </connections>
                         </barButtonItem>
@@ -149,27 +150,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qra-lw-XiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-462" y="113"/>
+            <point key="canvasLocation" x="-463" y="113"/>
         </scene>
-        <!--Compose View Controller-->
+        <!--Photo Map View Controller-->
         <scene sceneID="CnW-h8-hUL">
             <objects>
-                <viewController id="c6V-kf-48e" customClass="ComposeViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createPostVC" id="c6V-kf-48e" customClass="PhotoMapViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpA-cK-3lZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYz-vz-L0F">
-                                <rect key="frame" x="16" y="64" width="150" height="150"/>
+                                <rect key="frame" x="16" y="83" width="175" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnY-0i-09X">
-                                <rect key="frame" x="174" y="64" width="185" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bni-vd-Lyc">
+                                <rect key="frame" x="226" y="124" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Take Photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-Qw-p1G">
+                                <rect key="frame" x="220" y="162" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Photo"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-Mr-CsM">
+                                <rect key="frame" x="16" y="285" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xT3-eW-9NJ"/>
@@ -205,7 +217,7 @@
         <scene sceneID="T7P-oG-f3W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pB0-e5-HHT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="feed_tab" id="tIp-2G-nBv"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="feed_tab" selectedImage="feed_tab" id="tIp-2G-nBv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XRZ-fV-WNe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
