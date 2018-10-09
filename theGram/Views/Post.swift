@@ -12,7 +12,7 @@ import Parse
 class Post: PFObject, PFSubclassing {
     @NSManaged var media : PFFile
     @NSManaged var author: PFUser
-    @NSManaged var caption: String
+    @NSManaged var caption: String?
     @NSManaged var likesCount: Int
     @NSManaged var commentsCount: Int
     
@@ -39,12 +39,20 @@ class Post: PFObject, PFSubclassing {
         // Add relevant fields to the object
         post.media = getPFFileFromImage(image: image)! // PFFile column type
         post.author = PFUser.current()! // Pointer column type that points to PFUser
-        post.caption = caption!
+        post.caption = caption ?? ""
         post.likesCount = 0
         post.commentsCount = 0
         
         // Save object (following function will save the object in Parse asynchronously)
-        post.saveInBackground(block: completion)
+        //post.saveInBackground(block: completion)
+        post.saveInBackground { (success: Bool, error: Error?) in
+            if success {
+                print("Saved new post!")
+            }
+            else {
+                print("Couldn't save post, error: \(error?.localizedDescription)")
+            }
+        }
     }
     
     /**
