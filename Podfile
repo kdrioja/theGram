@@ -8,6 +8,7 @@ target 'theGram' do
   # Pods for theGram
   pod 'Parse'
   pod 'ParseLiveQuery'
+  pod 'ParseUI'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

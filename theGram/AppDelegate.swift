@@ -25,14 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-        if PFUser.current() != nil {
-            print("Welcome back, \(PFUser.current()!.username!)!")
-            /*
+        if let currentUser = PFUser.current() {
+            print("Welcome back \(currentUser.username!) 😀")
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "homeVC")
-             */
-
+            let homeViewController = storyboard.instantiateViewController(withIdentifier: "rootHomeVC")
+            window?.rootViewController = homeViewController
         }
+
         
         return true
     }
