@@ -8,15 +8,36 @@
 
 import UIKit
 import Parse
+import ParseLiveQuery
 
 class HomeViewController: UIViewController {
 
+    var client: ParseLiveQuery.Client!
+    var subscription: Subscription<Post>!
+    var posts: [Post] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func fetchPosts() {
+        let query = Post.query()
+        query?.order(byDescending: "createdAt")
+        query?.includeKey("author")
+        query?.limit = 20
+        
+        query?.findObjectsInBackground(block: { (posts: [PFObject]?, error: Error?) in
+            if let posts = posts {
+                print("Retrived last 20 posts!")
+                
+            }
+            else {
+                print(error?.localizedDescription)
+            }
+        })
+    }
     
     @IBAction func onCreatePost(_ sender: Any) {
         
@@ -33,7 +54,6 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 print("Successful loggout")
-                
                 
                 // Load and show the login view controller
                 let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

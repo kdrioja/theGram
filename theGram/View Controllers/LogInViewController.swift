@@ -58,12 +58,7 @@ class LogInViewController: UIViewController {
                 if error?._code == 202 {
                     print("Username is already taken.")
                     self.errorLabel.text = "Username already taken"
-                    
-                    
-                    
-                    
                 }
-                
             }
         }
     }

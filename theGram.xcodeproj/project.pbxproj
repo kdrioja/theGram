@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0B4041216D5F8B00C78943 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B4040216D5F8B00C78943 /* PostCell.swift */; };
+		5D0B4043216D613200C78943 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B4042216D613200C78943 /* Post.swift */; };
 		5D2AB24F216AF91600805EE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2AB24E216AF91600805EE6 /* ProfileViewController.swift */; };
 		5D2E6D7E216987720060F114 /* PhotoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */; };
 		5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5008FD2164844600EF2CD0 /* AppDelegate.swift */; };
@@ -17,7 +19,6 @@
 		5D50091E2164844800EF2CD0 /* theGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50091D2164844800EF2CD0 /* theGramUITests.swift */; };
 		5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50092B21648BA600EF2CD0 /* LogInViewController.swift */; };
 		5D7C7B27216969B40046C1CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C7B26216969B40046C1CB /* HomeViewController.swift */; };
-		5DAA8F6D216A827D0027B8F7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAA8F6C216A827D0027B8F7 /* Post.swift */; };
 		5DF6A24F216D3B3C00DE6F40 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6A24E216D3B3C00DE6F40 /* CreatePostViewController.swift */; };
 		8CF1033E973185E641452426 /* Pods_theGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930CE4E880BE511D29D33CE /* Pods_theGramUITests.framework */; };
 		B7A8849A6B73748AAB1D3CF1 /* Pods_theGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */; };
@@ -46,6 +47,8 @@
 		1BAAB8F66283A1B318128855 /* Pods-theGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGram.release.xcconfig"; path = "Pods/Target Support Files/Pods-theGram/Pods-theGram.release.xcconfig"; sourceTree = "<group>"; };
 		1F1070959CF7E72743780325 /* Pods_theGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54953CB195165B59919B752B /* Pods-theGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGram/Pods-theGram.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0B4040216D5F8B00C78943 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		5D0B4042216D613200C78943 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5D2AB24E216AF91600805EE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5D2E6D7D216987720060F114 /* PhotoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapViewController.swift; sourceTree = "<group>"; };
 		5D5008FA2164844600EF2CD0 /* theGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +65,6 @@
 		5D50091F2164844800EF2CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D50092B21648BA600EF2CD0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5D7C7B26216969B40046C1CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5DAA8F6C216A827D0027B8F7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5DF6A24E216D3B3C00DE6F40 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		B80B1927AC55F5FDCDF02B90 /* Pods_theGramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theGramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F259E037374B985891B076 /* Pods-theGramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theGramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theGramUITests/Pods-theGramUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +170,8 @@
 		5DAA8F6E216A82840027B8F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DAA8F6C216A827D0027B8F7 /* Post.swift */,
+				5D0B4040216D5F8B00C78943 /* PostCell.swift */,
+				5D0B4042216D613200C78943 /* Post.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,13 +373,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-theGram/Pods-theGram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,10 +420,11 @@
 				5D7C7B27216969B40046C1CB /* HomeViewController.swift in Sources */,
 				5DF6A24F216D3B3C00DE6F40 /* CreatePostViewController.swift in Sources */,
 				5D5008FE2164844600EF2CD0 /* AppDelegate.swift in Sources */,
+				5D0B4043216D613200C78943 /* Post.swift in Sources */,
 				5D2E6D7E216987720060F114 /* PhotoMapViewController.swift in Sources */,
 				5D2AB24F216AF91600805EE6 /* ProfileViewController.swift in Sources */,
 				5D50092C21648BA600EF2CD0 /* LogInViewController.swift in Sources */,
-				5DAA8F6D216A827D0027B8F7 /* Post.swift in Sources */,
+				5D0B4041216D5F8B00C78943 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
