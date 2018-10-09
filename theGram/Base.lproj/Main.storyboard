@@ -81,7 +81,7 @@
         <!--Profile-->
         <scene sceneID="k1Q-dG-gqX">
             <objects>
-                <viewController id="I2x-U7-y2j" customClass="ProfileViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="I2x-U7-y2j" customClass="ProfileViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xvw-qI-7Qg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="cMh-PC-bvt">
                             <connections>
                                 <action selector="onCreatePost:" destination="dgx-HT-A1D" id="C4s-z4-TPp"/>
-                                <segue destination="IJQ-9j-Rt2" kind="presentation" id="yvX-Ak-YhF"/>
+                                <segue destination="IJQ-9j-Rt2" kind="presentation" identifier="createPostSegue" id="yvX-Ak-YhF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-463" y="113"/>
         </scene>
-        <!--Photo Map View Controller-->
+        <!--Create Post View Controller-->
         <scene sceneID="CnW-h8-hUL">
             <objects>
-                <viewController storyboardIdentifier="createPostVC" id="c6V-kf-48e" customClass="PhotoMapViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createPostVC" id="c6V-kf-48e" customClass="CreatePostViewController" customModule="theGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpA-cK-3lZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,28 +168,44 @@
                                 <rect key="frame" x="226" y="124" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="onTakePhoto:" destination="c6V-kf-48e" eventType="touchUpInside" id="CTg-XY-51S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-Qw-p1G">
                                 <rect key="frame" x="220" y="162" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="onSelectPhoto:" destination="c6V-kf-48e" eventType="touchUpInside" id="Sns-kE-b4V"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-Mr-CsM">
-                                <rect key="frame" x="16" y="285" width="343" height="128"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQ7-EY-ZKb">
+                                <rect key="frame" x="16" y="278" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xT3-eW-9NJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="X6l-te-KwZ">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7xo-QI-k6H"/>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="d1d-vb-NDv"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7xo-QI-k6H">
+                            <connections>
+                                <action selector="onCancel:" destination="c6V-kf-48e" id="5jd-Ky-PmT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="d1d-vb-NDv">
+                            <connections>
+                                <action selector="onShare:" destination="c6V-kf-48e" id="eQ8-4F-n6B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="sQ7-EY-ZKb" id="Jhi-3e-yEi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KA-oa-b3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

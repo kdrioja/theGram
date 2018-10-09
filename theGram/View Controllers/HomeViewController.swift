@@ -21,9 +21,8 @@ class HomeViewController: UIViewController {
     @IBAction func onCreatePost(_ sender: Any) {
         
         //edit this code below to transition to CreatePostViewController
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
-        self.present(loginViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "createPostSegue", sender: nil)
+
         
     }
     
@@ -34,10 +33,13 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 print("Successful loggout")
+                
+                
                 // Load and show the login view controller
                 let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "logInViewController") as! LogInViewController
                 self.present(loginViewController, animated: true, completion: nil)
+                
             }
         })
     }
