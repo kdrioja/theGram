@@ -21,6 +21,11 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Tap gesture recognizer
+        //let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(gestureRecognizer:)))
+        //self.view.addGestureRecognizer(gestureRecognizer)
+        
+        //Pull to refresh function
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(fetchPosts(_:)), for: UIControl.Event.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -32,6 +37,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         
         
         
+    }
+    
+    @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {_ in}))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -94,4 +105,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             }
         })
     }
+    
+    
+    
 }
