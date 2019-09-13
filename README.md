@@ -35,20 +35,11 @@ The following **stretch** features are implemented:
 - [ ] Run your app on your phone and use the camera to take the photo (+1pt)
 
 
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
-
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
-
-1.
-2.
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![theGram Demo](IG.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -59,13 +50,9 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
 
-## Notes
-
-Describe any challenges encountered while building the app.
-
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Kenia Rioja-Naranjo]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
